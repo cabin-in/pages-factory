@@ -1,21 +1,15 @@
 [
     {
-        "label":"开发规范",
-        "name":"exploitdocument",
-        "url":"/exploitdocument",
-        "icon":"el-icon-filesearch"
+        "label":"关于pagesFactory",
+        "name":"base",
+        "url":"/base",
+        "icon":"el-icon-icon"
     },
     {
-        "label":"基础",
+        "label":"快速上手",
         "name":"base",
         "url":"/base",
         "icon":"el-icon-setting"
-    },
-    {
-        "label":"图标",
-        "name":"icon",
-        "url":"/icon",
-        "icon":"el-icon-icon"
     },
     {
         "label":"布局",
@@ -23,24 +17,9 @@
         "icon":"el-icon-cluster",
         "children":[
             {
-                "label":"flexbox",
-                "name":"flexbox",
-                "url":"/flexbox"
-            },
-            {
-                "label":"panel",
-                "name":"panel",
-                "url":"/panel"
-            },
-            {
-                "label":"pageheader",
-                "name":"pageheader",
-                "url":"/pageheader"
-            },
-            {
-                "label":"toolbar",
-                "name":"toolbar",
-                "url":"/toolbar"
+                "label":"formItemsRander",
+                "name":"form-items-rander",
+                "url":"/form-items-rander"
             }
         ]
     },
@@ -53,41 +32,6 @@
                 "label":"timebar",
                 "name":"timebar",
                 "url":"/timebar"
-            },
-            {
-                "label":"treeselect",
-                "name":"treeselect",
-                "url":"/treeselect"
-            },
-            {
-                "label":"commontree",
-                "name":"commontree",
-                "url":"/commontree"
-            },
-            {
-                "label":"commontreewithpanel",
-                "name":"commontreewithpanel",
-                "url":"/commontreewithpanel"
-            },
-            {
-                "label":"datadictionaryforsel",
-                "name":"datadictionaryforsel",
-                "url":"/datadictionaryforsel"
-            },
-            {
-                "label":"datadictionaryfortree",
-                "name":"datadictionaryfortree",
-                "url":"/datadictionaryfortree"
-            },
-            {
-                "label":"comdatadictionary",
-                "name":"comdatadictionary",
-                "url":"/comdatadictionary"
-            },
-            {
-                "label":"tableedit",
-                "name":"tableedit",
-                "url":"/tableedit"
             }
         ]
     },
