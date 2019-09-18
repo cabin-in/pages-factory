@@ -4,10 +4,12 @@
  * @Date: 2019-09-16 19:27:33
  * @LastEditTime: 2019-09-16 19:27:33
  */
-import formTtemsRander from './renders/formItemsRander.vue'
+import formItemsRander from './renders/formItemsRander.vue'
+import formLayout from './components/layout/formLayout.jsx'
 
 const components = [
-  formTtemsRander
+  formItemsRander,
+  formLayout
 ]
 
 const install = function (Vue) {
@@ -23,5 +25,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
   install,
-  formTtemsRander
+  formItemsRander,
+  formLayout
 }

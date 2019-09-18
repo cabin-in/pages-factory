@@ -46,11 +46,7 @@
         const _this = this
         if (this.option.eventConf && this.option.eventConf.isOn) {
           if (this.option.eventConf.blur !== undefined) {
-            this.option.eventConf.blur(node, this.option, this.model, _this)
-            // 是否触发合计计算
-            if (this.option.eventConf.isSum) {
-              this.$emit('sumCount')
-            }
+            this.option.eventConf.blur(node,  _this)
           }
         }
       },
@@ -58,7 +54,7 @@
         const _this = this
         if (this.option.eventConf && this.option.eventConf.isOn) {
           if (this.option.eventConf.init !== undefined) {
-            this.option.eventConf.init(this.option, this.model, _this)
+            this.option.eventConf.init(_this)
           }
         }
       }

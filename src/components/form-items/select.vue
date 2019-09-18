@@ -54,7 +54,7 @@
       _initComs () {
         const _this = this
         if (this.option.eventConf && this.option.eventConf.isOn && this.option.eventConf.init) {
-            this.option.eventConf.init(this.option, this.model, _this)
+            this.option.eventConf.init(_this)
         }
       }
     }

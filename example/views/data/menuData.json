@@ -6,6 +6,12 @@
         "icon":"el-icon-icon"
     },
     {
+        "label":"日志",
+        "name":"log",
+        "url":"/log",
+        "icon":"el-icon-filesearch"
+    },
+    {
         "label":"快速上手",
         "name":"base",
         "url":"/base",
@@ -17,82 +23,62 @@
         "icon":"el-icon-cluster",
         "children":[
             {
-                "label":"formItemsRander",
-                "name":"formItemsRander",
-                "url":"/formItemsRander"
+                "label":"formLayout",
+                "name":"formLayout",
+                "url":"/formLayout"
+            },
+            {
+                "label":"pageLayout",
+                "name":"pageLayout",
+                "url":"/pageLayout"
             }
         ]
     },
     {
-        "label":"表单",
-        "name":"form",
+        "label":"渲染器",
+        "name":"randers",
         "icon":"el-icon-edit-outline",
         "children":[
             {
-                "label":"timebar",
-                "name":"timebar",
-                "url":"/timebar"
+                "label":"formItemsRander",
+                "name":"formItemsRander",
+                "url":"/formItemsRander"
+            },
+            {
+                "label":"containerRander",
+                "name":"containerRander",
+                "url":"/containerRander"
             }
         ]
     },
     {
-        "label":"数据",
-        "name":"data",
+        "label":"容器",
+        "name":"container",
         "icon":"el-icon-tickets",
         "children":[
             {
-                "label":"list",
-                "name":"list",
-                "url":"/list"
-            },
-            {
-                "label":"listr",
-                "name":"listr",
-                "url":"/listr"
-            },
-            {
-                "label":"listn",
-                "name":"listn",
-                "url":"/listn"
-            },
-            {
-                "label":"onlytable",
-                "name":"onlytable",
-                "url":"/onlytable"
-            },
-            {
-                "label":"table",
-                "name":"table",
-                "url":"/table"
-            },
-            {
-                "label":"tabler",
-                "name":"tabler",
-                "url":"/tabler"
-            },
-            {
-                "label":"tablen",
-                "name":"tablen",
-                "url":"/tablen"
+                "label":"formBlock",
+                "name":"formBlock",
+                "url":"/formBlock"
             }
         ]
     },
     {
-        "label":"其他",
-        "name":"other",
+        "label":"模块",
+        "name":"model",
         "icon":"el-icon-more",
         "children":[
             {
-                "label":"map",
-                "name":"map",
-                "url":"/map"
+                "label":"commonPage",
+                "name":"commonPage",
+                "url":"/commonPage"
             }
         ]
     },
     {
-        "label":"日志",
-        "name":"log",
-        "url":"/log",
+        "label":"关于markdown",
+        "name":"markdown",
+        "url":"/markdown",
         "icon":"el-icon-filesearch"
     }
 

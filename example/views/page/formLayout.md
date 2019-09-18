@@ -4,12 +4,12 @@
  * @Date: 2019-09-18 08:46:30
  * @LastEditTime: 2019-09-18 14:51:34
  -->
-  ### formItemsRander
+  ### formLayout
   
-  > 标签： `<form-items-rander />` 
+  > 标签： `<form-layout />` 
 
 
-  **功能：**  表单控件渲染器，根据指定配置渲染出对应的控件
+  **功能：**  控件布局组件
 
   **示例：**
 

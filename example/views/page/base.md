@@ -1,6 +1,6 @@
-### `element-extension`  
+### `pagesFactory`  
 
-> `element-extension` 是易龙软件提供的针对物资领域系统软件相关的业务组建库，其中大部分组建依赖`element-mini-ui` 
+> `pagesFactory` 是基于JSON` 
 
 
 #### 使用方式

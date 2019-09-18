@@ -18,7 +18,7 @@
             </div>
             <div v-else :key="index">
               <span class="subtitle"> {{ i.label }} </span>
-              <div v-for="(ii, iindex) in i.children" :key="iindex" class="item" @click="goUrl(ii.url)">
+              <div v-for="(ii, iindex) in i.children" :key="iindex" class="item leaf" @click="goUrl(ii.url)">
                 {{ ii.label }}
               </div>
             </div>
@@ -101,15 +101,19 @@
         font-size: 16px;
         & .subtitle {
           color: #aaa;
-          font-size: 14px;
+          font-size: 16px;
         }
         & .item {
-          line-height: 45px;
-          height: 45px;
+          line-height: 35px;
+          height: 35px;
+          font-size: 14px;
           cursor: pointer;
           &:hover {
             color: $color-primary;
           }
+        }
+        & .leaf {
+          padding-left: 5px;
         }
       }
       & > .page {
