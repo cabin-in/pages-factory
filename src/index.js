@@ -1,4 +1,10 @@
-import formTtemsRander from './renders/form-items-rander.jsx'
+/*
+ * @Description: 未描述
+ * @Author: danielmlc
+ * @Date: 2019-09-16 19:27:33
+ * @LastEditTime: 2019-09-16 19:27:33
+ */
+import formTtemsRander from './renders/formItemsRander.vue'
 
 const components = [
   formTtemsRander

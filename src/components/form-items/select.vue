@@ -1,18 +1,28 @@
-
+<!--
+ * @Description: 未描述
+ * @Author: danielmlc
+ * @Date: 2019-09-18 14:06:56
+ * @LastEditTime: 2019-09-18 14:36:40
+ -->
 
 <template>
- <el-input
-    v-model.trim="model[option.name]"
+ <el-select
+    v-model="model[option.name]"
     :size="option.elmentConfig.size"
-    :disabled="option.elmentConfig.disabled"
     :placeholder="option.elmentConfig.placeholder"
-    :readonly="option.elmentConfig.readonly"
-    :style="option.elmentConfig.style"
-    @blur="_blur(model[option.name])" />
+    :disabled="option.elmentConfig.disabled"
+    :clearable="option.elmentConfig.clearable"
+    @change="_change">
+    <el-option
+      v-for="item in option.elmentConfig.data"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value" />
+  </el-select>
 </template>
 <script>
   export default {
-    name:"input-number",
+    name:"CXXXX",
     props: {
       option: {
         type: Object,
@@ -35,10 +45,10 @@
       this._initComs()
     },
     methods: {
-      _blur (node) {
+      _change (node) {
         const _this = this
-        if (this.option.eventConf && this.option.eventConf.isOn && this.option.eventConf.blur) {
-            this.option.eventConf.blur(node, _this)
+        if (this.option.eventConf && this.option.eventConf.isOn && this.option.eventConf.change) {
+            this.option.eventConf.change(node, _this)
         }
       },
       _initComs () {

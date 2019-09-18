@@ -1,10 +1,17 @@
-import inputNumber from '../components/form-items/input-number.vue'
+import inputNumber from '../components/form-items/inputNumber.vue'
+import inputText from '../components/form-items/inputText.vue'
 export default {
-  name: 'formItemsRander',
-  components:{
-    inputNumber
+  name: 'FormItemsRander',
+  components: {
+    inputNumber,
+    inputText
   },
-  props:{
+  props: {
+    name: {
+      type: String,
+      require: true,
+      default: 'inputText'
+    },
     option: {
       type: Object,
       require: true,
@@ -20,9 +27,12 @@ export default {
       }
     }
   },
-  render (h){
+  methods: {
+  },
+  render (h) {
     return (
-      <input-number
+      <component
+        is={this.name}
         option={this.option}
         model={this.model}
       />

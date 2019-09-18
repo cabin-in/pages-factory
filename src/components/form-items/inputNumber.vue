@@ -1,3 +1,10 @@
+<!--
+ * @Description: 未描述
+ * @Author: danielmlc
+ * @Date: 2019-09-18 08:46:30
+ * @LastEditTime: 2019-09-18 10:28:07
+ -->
+
 <template>
   <el-input
     v-model.number="model[option.name]"
@@ -11,6 +18,7 @@
 </template>
 <script>
   export default {
+    name:"InputNumber",
     props: {
       option: {
         type: Object,

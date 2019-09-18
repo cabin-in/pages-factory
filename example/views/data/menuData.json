@@ -18,8 +18,8 @@
         "children":[
             {
                 "label":"formItemsRander",
-                "name":"form-items-rander",
-                "url":"/form-items-rander"
+                "name":"formItemsRander",
+                "url":"/formItemsRander"
             }
         ]
     },
