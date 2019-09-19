@@ -10,18 +10,16 @@
 
 
   **功能：**  控件布局组件
-
-  **示例：**
+**tabPanel示例：**
 
 :::demo
 
   ```html
  <template>
  <div>
-  <form-items-rander
-    :option="config"
+ <form-layout
+    :formOption="config"
     :model="model"
-    comp="selectComp"
   />
  </div>
  
@@ -30,24 +28,173 @@
    export default {
      data(){
        return {
+        model:{
+              name:'',
+              age:0,
+              name1:'',
+              age1:0
+            },
          config:{
-           name:"name",
-           elmentConfig:{
-             data:[
-               {label:'哈哈', value:1},
-               {label:'哈哈1', value:2},
-               {label:'哈哈2', value:3},
-             ]
+           pageConf:{
+             tab:true,
+             type:"border-card",
+             style:"height:300px;",
+             tabPosition:"top"
            },
-           eventConf:{
-             isOn:true,
-             change:function(node, _this){
-               console.log(node,_this)
+           tabConfigs:[
+             {
+                tabpanel: { //各个分页的tabpanel配置
+                    title: "基本信息", //标题
+                    disabled: false,  //是否可用
+                },
+                formConfig:[
+                  {
+                    name:'name',
+                    label:'名称',
+                    comp:'inputTextComp',
+                    position: {
+                      spanNum: 24,
+                    },
+                    elmentConfig:{
+                    },
+                    eventConf:{
+                      isOn:true,
+                      blur:function(node, _this){
+                        console.log(node,_this)
+                      }
+                    }
+                  },
+                  {
+                    name:"age",
+                    label:'年龄',
+                    comp:'inputNumberComp',
+                    position: {
+                      spanNum: 24,
+                    },
+                    elmentConfig:{
+                    },
+                    eventConf:{
+                      isOn:true,
+                      blur:function(node, _this){
+                        console.log(node,_this)
+                      }
+                    }
+                  }
+                ]
+            },
+            {
+                tabpanel: { //各个分页的tabpanel配置
+                    title: "其他信息", //标题
+                    disabled:false,  //是否可用
+                },
+                formConfig:[
+                  {
+                    name:'name1',
+                    label:'名称xxx',
+                    comp:'inputTextComp',
+                    position: {
+                      spanNum: 24,
+                    },
+                    elmentConfig:{
+                    },
+                    eventConf:{
+                      isOn:true,
+                      blur:function(node, _this){
+                        console.log(node,_this)
+                      }
+                    }
+                  },
+                  {
+                    name:"age1",
+                    label:'年龄xxx',
+                    comp:'inputNumberComp',
+                    position: {
+                      spanNum: 24,
+                    },
+                    elmentConfig:{
+                    },
+                    eventConf:{
+                      isOn:true,
+                      blur:function(node, _this){
+                        console.log(node,_this)
+                      }
+                    }
+                  }
+                ]
+            }
+           ]
+           
+         }
+       }
+     },
+   }
+   </script>
+   <style lang="css" >
+   </style>
+  ```
+:::
+
+**通用型示例：**
+
+:::demo
+
+  ```html
+ <template>
+ <div>
+ <form-layout
+    :formOption="config"
+    :model="model"
+  />
+ </div>
+ 
+ </template>
+   <script>
+   export default {
+     data(){
+       return {
+        model:{
+              name:'',
+              age:0
+            },
+         config:{
+           pageConf:{
+             tab:false,
+             style:"height:300px;"
+           },
+           formConfig:[
+             {
+              name:'name',
+              label:'名称',
+              comp:'inputTextComp',
+              position: {
+                spanNum: 24,
+              },
+              elmentConfig:{
+              },
+              eventConf:{
+                isOn:true,
+                blur:function(node, _this){
+                  console.log(node,_this)
+                }
+              }
+             },
+             {
+              name:"age",
+              label:'年龄',
+              comp:'inputNumberComp',
+              position: {
+                spanNum: 24,
+              },
+              elmentConfig:{
+              },
+              eventConf:{
+                isOn:true,
+                blur:function(node, _this){
+                  console.log(node,_this)
+                }
+              }
              }
-           }
-         },
-         model:{
-           name:2,
+           ]
          }
        }
      },

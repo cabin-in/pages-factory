@@ -5,60 +5,93 @@ export default{
       formItemsRander
     },
     props: {
-
+        formOption:{
+            type: Object,
+            require: true,
+        },
+        model:{ 
+            type: Object,
+            require: true,
+        }
     },
     methods: {
-        renderItem(tabConfigs,indexs){
-            return tabConfigs.map((formData,index)=>{
-                 if(formData.title){
+        renderItem(formConfig){
+            return formConfig.map((formData,index)=>{
+                 if(formData.label){
                     return  <el-col span={formData.position.spanNum} >
                             <el-form-item
-                                label={formData.title}
+                                label={formData.label}
                                 key={index}
                                 prop={formData.name}
                                 rules={formData.rules}
                             >
-                                <yl-rendercoms  
-                                    ref="rendercoms"
+                                <form-items-rander  
+                                    ref="formItemsRander"
                                     option={formData}
                                     model={this.model}
-                                    items={this.items}
-                                    refList={this.refList}
-                                    on-change={this._change}
-                                    on-delItem={this._delItem}
-                                    on-blur={this._blur}
-                                    on-method1={this._method1}
-                                    on-method2={this._method2}
-                                    on-init={this._initComs}
-                                    on-sumCount={this._sumCount}
-                                    ></yl-rendercoms>
+                                />
                            </el-form-item>
                         </el-col>
                  }else {
                     return  <el-col span={formData.position.spanNum} >
-                                    <yl-rendercoms  
-                                        ref="rendercoms"
-                                        option={formData}
-                                        model={this.model}
-                                        items={this.items}
-                                        refList={this.refList}
-                                        on-change={this._change}
-                                        on-delItem={this._delItem}
-                                        on-blur={this._blur}
-                                        on-method1={this._method1}
-                                        on-method2={this._method2}
-                                        on-init={this._initComs}
-                                        on-sumCount={this._sumCount}
-                                    ></yl-rendercoms>
+                               <form-items-rander  
+                                    ref="formItemsRander"
+                                    option={formData}
+                                    model={this.model}
+                                />
                             </el-col>
                  }
                   
             }) 
         },
     },
-    render(h){
-        return (
-            <p>哈哈哈</p>
-        )
+    mounted(){
+        console.log(this.formOption)
+    },
+    render(h){ 
+            let pageConf = this.formOption.pageConf
+            if(pageConf && pageConf.tab){
+                // tabpanel形式
+                let tabConfigs = this.formOption.tabConfigs;
+                return  <el-form 
+                            label-width="100px"
+                            model={this.model}
+                        >
+                            <el-tabs 
+                                type={pageConf.type}
+                                tab-position={pageConf.tabPosition}
+                            >
+                            {
+                                tabConfigs.map((item, indexs)=>{
+                                    return <el-tab-pane 
+                                            label={item.tabpanel.title} 
+                                            style={pageConf.style} 
+                                            disabled={item.tabpanel.disabled}
+                                        >
+                                                { 
+                                                    //循环开始
+                                                    this.renderItem(item.formConfig)
+                                                } 
+                                            </el-tab-pane>
+                                })
+                            } 
+                            </el-tabs>
+                        </el-form>
+            }
+            else{
+                //经典的form表单形式
+                let formConfig=this.formOption.formConfig;
+                 return <el-form 
+                            label-width="100px"
+                            model={this.model}
+                        >
+                        <div style={this.formOption.pageConf.style}>
+                            {
+                                this.renderItem(formConfig)
+                            }
+                        </div>
+                      </el-form>
+                 
+            }
     }
 }

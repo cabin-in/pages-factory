@@ -14,7 +14,7 @@ module.exports =  {
     },
     output: {
         path: path.resolve(process.cwd(), './lib'),
-        filename: 'element-extension.js',
+        filename: 'pages-factory.js',
         chunkFilename: '[id].js',
         libraryTarget: 'commonjs2',
         libraryExport: 'default'

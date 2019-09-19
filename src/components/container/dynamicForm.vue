@@ -2,10 +2,8 @@
     <div class="form">
         <el-form :model="formModel.order" ref="dynamicFormConf" label-width="100px" >
             <form-layout  ref="formLayout"
-                :dynamicFormConf="dynamicFormConf" 
+                :formConf="dynamicFormConf" 
                 :model="formModel.order"
-                :items="formModel.items"
-                :refList="refList"
                 @change="_change"
                 @blur="_blur"
                 @initComs="_initComs"

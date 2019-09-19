@@ -5,7 +5,7 @@
  * @LastEditTime: 2019-09-18 14:51:34
  -->
   ### formItemsRander
-  
+
   > 标签： `<form-items-rander />` 
 
 
@@ -21,7 +21,6 @@
   <form-items-rander
     :option="config"
     :model="model"
-    comp="selectComp"
   />
  </div>
  
@@ -32,6 +31,7 @@
        return {
          config:{
            name:"name",
+           comp:"selectComp",
            elmentConfig:{
              data:[
                {label:'哈哈', value:1},
