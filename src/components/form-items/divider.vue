@@ -2,31 +2,24 @@
  * @Description: 未描述
  * @Author: danielmlc
  * @Date: 2019-09-18 14:06:56
- * @LastEditTime: 2019-09-23 12:31:25
+ * @LastEditTime: 2019-09-23 15:47:47
  -->
 
 <template>
-  <el-checkbox
-    v-model="model[option.name]"
-    :disabled="option.elmentConfig.disabled"
+ <el-divider
+    :content-position="option.elmentConfig.contentPosition"
+    :direction="option.elmentConfig.direction"
     @change="_change">
-        {{ option.elmentConfig.label }}
-  </el-checkbox>
+    {{option.elmentConfig.title}}
+  </el-divider>
 </template>
 <script>
   export default {
-    name:"CheckBox",
+    name:"Divider",
     props: {
       option: {
         type: Object,
         require: true,
-        default: function () {
-          return {}
-        }
-      },
-      model: {
-        type: Object,
-        require: false,
         default: function () {
           return {}
         }
@@ -38,12 +31,6 @@
       this._initComs()
     },
     methods: {
-      _change (node) {
-        const _this = this
-        if (this.option.eventConf && this.option.eventConf.isOn && this.option.eventConf.change) {
-            this.option.eventConf.change(node, _this)
-        }
-      },
       _initComs () {
         const _this = this
         if (this.option.eventConf && this.option.eventConf.isOn && this.option.eventConf.init) {
