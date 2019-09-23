@@ -6,7 +6,7 @@
  -->
 <template>
   <component
-    :is="comp"
+    :is="option.comp"
     :option="option"
     :model="model"
   />
@@ -23,11 +23,6 @@ export default {
     selectComp
   } ,
   props: {
-    comp: {
-      type: String,
-      require: true,
-      default: 'inputTextComp'
-    },
     option: {
       type: Object,
       require: true,
@@ -37,15 +32,11 @@ export default {
     },
     model: {
       type: Object,
-      require: false,
+      require: true,
       default: function () {
         return {}
       }
     }
   },
-  methods: {
-  },
-  mounted(){
-  }
 }
 </script>

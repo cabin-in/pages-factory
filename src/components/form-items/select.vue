@@ -22,7 +22,7 @@
 </template>
 <script>
   export default {
-    name:"CXXXX",
+    name:"Select",
     props: {
       option: {
         type: Object,
