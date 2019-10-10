@@ -2,13 +2,13 @@
  * @Description: 未描述
  * @Author: danielmlc
  * @Date: 2019-09-18 10:16:38
- * @LastEditTime: 2019-09-23 15:49:22
+ * @LastEditTime: 2019-09-26 17:08:48
  -->
 <template>
   <component
     :is="option.comp"
     :option="option"
-    :model="model"
+    :model="comProps"
   />
 </template>
 <script>
@@ -25,7 +25,11 @@ export default {
     selectComp,
     checkBoxComp,
     dividerComp
-  } ,
+  },
+  data(){
+    return {
+    }
+  },
   props: {
     option: {
       type: Object,
@@ -34,7 +38,7 @@ export default {
         return {}
       }
     },
-    model: {
+    comProps: {
       type: Object,
       require: true,
       default: function () {
@@ -42,5 +46,10 @@ export default {
       }
     }
   },
+  beforeMount(){
+  },
+  mounted(){
+    
+  }
 }
 </script>

@@ -2,7 +2,7 @@
  * @Description: 未描述
  * @Author: danielmlc
  * @Date: 2019-09-18 08:46:30
- * @LastEditTime: 2019-09-23 15:54:19
+ * @LastEditTime: 2019-09-26 17:09:40
  -->
   ### formLayout
   
@@ -19,7 +19,7 @@
  <div>
  <form-layout
     :formOption="config"
-    :model="model"
+    :formModel="model"
   />
  </div>
  
@@ -29,11 +29,11 @@
      data(){
        return {
         model:{
-              name:'',
+              name:'xxxx',
               age:0,
-              name1:'',
+              name1:'dsadsad',
               age1:0,
-              flag:false
+              flag:true
             },
          config:{
            pageConf:{

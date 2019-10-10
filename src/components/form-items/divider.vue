@@ -2,14 +2,14 @@
  * @Description: 未描述
  * @Author: danielmlc
  * @Date: 2019-09-18 14:06:56
- * @LastEditTime: 2019-09-23 15:47:47
+ * @LastEditTime: 2019-09-25 16:07:03
  -->
 
 <template>
  <el-divider
     :content-position="option.elmentConfig.contentPosition"
     :direction="option.elmentConfig.direction"
-    @change="_change">
+    >
     {{option.elmentConfig.title}}
   </el-divider>
 </template>
