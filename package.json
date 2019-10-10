@@ -1,6 +1,6 @@
 {
   "name": "pages-factory",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "json配置渲染的动态页面组件",
   "main": "lib/pages-factory.js",
   "scripts": {

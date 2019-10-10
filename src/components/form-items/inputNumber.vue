@@ -2,11 +2,12 @@
  * @Description: 未描述
  * @Author: danielmlc
  * @Date: 2019-09-18 08:46:30
- * @LastEditTime: 2019-09-18 10:28:07
+ * @LastEditTime: 2019-10-10 14:51:47
  -->
 
 <template>
   <el-input
+    type="number"
     v-model.number="model[option.name]"
     :size="option.elmentConfig.size"
     :disabled="option.elmentConfig.disabled"
