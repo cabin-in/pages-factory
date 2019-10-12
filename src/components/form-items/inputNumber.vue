@@ -2,20 +2,22 @@
  * @Description: 未描述
  * @Author: danielmlc
  * @Date: 2019-09-18 08:46:30
- * @LastEditTime: 2019-10-10 14:51:47
+ * @LastEditTime: 2019-10-12 11:14:13
  -->
 
 <template>
-  <el-input
-    type="number"
+  <el-input-number
+    style="width:100%"
     v-model.number="model[option.name]"
     :size="option.elmentConfig.size"
     :disabled="option.elmentConfig.disabled"
     :placeholder="option.elmentConfig.placeholder"
-    :readonly="option.elmentConfig.readonly"
-    :style="option.elmentConfig.style"
-    @blur="_blur(model[option.name])"
-    @mousewheel.native="_preventmousewheel" />
+    :min="option.elmentConfig.min"
+    :max="option.elmentConfig.max"
+    :step="option.elmentConfig.step"
+    :precision="option.elmentConfig.precision"
+    :controls="false"
+    @blur="_blur(model[option.name])"/>
 </template>
 <script>
   export default {
