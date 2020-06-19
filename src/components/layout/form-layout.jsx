@@ -1,4 +1,4 @@
-import formItemsRander from '../../renders/formItemsRander.vue'
+import formItemsRander from '../../renders/form-items-rander.vue'
 export default {
   name: 'FormLayout',
   components: {

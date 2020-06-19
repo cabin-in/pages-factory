@@ -2,10 +2,10 @@
  * @Description: 未描述
  * @Author: danielmlc
  * @Date: 2019-09-16 19:27:33
- * @LastEditTime: 2019-09-16 19:27:33
+ * @LastEditTime: 2020-06-19 10:29:37
  */
-import formItemsRander from './renders/formItemsRander.vue'
-import formLayout from './components/layout/formLayout.jsx'
+import formItemsRander from './renders/form-items-rander.vue'
+import formLayout from './components/layout/form-layout.jsx'
 
 const components = [
   formItemsRander,

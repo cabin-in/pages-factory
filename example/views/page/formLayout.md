@@ -2,7 +2,7 @@
  * @Description: 未描述
  * @Author: danielmlc
  * @Date: 2019-09-18 08:46:30
- * @LastEditTime: 2019-09-26 17:09:40
+ * @LastEditTime: 2020-06-19 10:56:16
  -->
   ### formLayout
   
@@ -54,7 +54,7 @@
                     label:'名称',
                     comp:'inputTextComp',
                     position: {
-                      spanNum: 24,
+                      spanNum: 12,
                     },
                     elmentConfig:{
                     },
@@ -63,6 +63,19 @@
                       blur:function(node, _this){
                         console.log(node,_this)
                       }
+                    }
+                  },
+                   {
+                    name:'name',
+                    label:'',
+                    comp:'tag',
+                    position: {
+                      spanNum: 12,
+                    },
+                    elmentConfig:{
+                      text:'我是标签'
+                    },
+                    eventConf:{
                     }
                   },
                   {
